@@ -1,10 +1,9 @@
-provider "github" {
-  token = var.github_token
-  owner = var.github_owner
+provider "google" {
+  project = var.project_id
+  region  = var.region
 }
 
-resource "github_repository" "hello_world" {
-  name        = "hello-world-repo"
-  description = "A simple 'Hello World' repository created by Terraform"
-  visibility  = "public"
+resource "google_storage_bucket" "hello_world" {
+  name     = "hello-world-bucket-terraform"
+  location = var.region
 }

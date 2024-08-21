@@ -1,9 +1,10 @@
-variable "github_token" {
-  description = "The GitHub token for API access"
+variable "project_id" {
+  description = "The GCP project ID"
   type        = string
 }
 
-variable "github_owner" {
-  description = "The GitHub username or organization"
+variable "region" {
+  description = "The GCP region to create resources in"
   type        = string
+  default     = "us-central1"
 }
